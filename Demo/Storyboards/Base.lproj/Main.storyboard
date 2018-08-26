@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="695-Rj-gXZ">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CircularProgress-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CircularProgressViewController" customModule="RevolutionaryExamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tYM-af-HME">
+                                <rect key="frame" x="16" y="422" width="233" height="29"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="21"/>
+                                <color key="textColor" red="0.16862745098039217" green="0.25882352941176467" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9l-L2-E1l">
+                                <rect key="frame" x="16" y="673" width="343" height="40"/>
+                                <color key="backgroundColor" red="0.56862745098039214" green="0.70196078431372544" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="fAf-k4-p2S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
+                                <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="ANIMATE!"/>
+                                <connections>
+                                    <action selector="animateTapped:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="ldU-Gn-6TP"/>
+                                </connections>
+                            </button>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" maximumValue="1000" translatesAutoresizingMaskIntoConstraints="NO" id="iAT-CY-xNA">
+                                <rect key="frame" x="265" y="422" width="94" height="29"/>
+                                <color key="tintColor" red="0.56862745098039214" green="0.70196078431372544" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="durationStepperTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="wdv-Zk-KTv"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z2b-Pl-i34">
+                                <rect key="frame" x="16" y="467" width="233" height="29"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="21"/>
+                                <color key="textColor" red="0.16862745098039217" green="0.25882352941176467" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="6As-me-K0a">
+                                <rect key="frame" x="265" y="466.66666666666669" width="94" height="30"/>
+                                <color key="tintColor" red="0.16862745100000001" green="0.25882352939999997" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.16862745098039217" green="0.25882352941176467" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="progressEditingDidEnd:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="ZgP-KN-jof"/>
+                                </connections>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zgx-e1-EIm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="406"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Y9l-L2-E1l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="1F2-ED-X89"/>
+                            <constraint firstItem="Zgx-e1-EIm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5nb-nu-45p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iAT-CY-xNA" secondAttribute="trailing" constant="16" id="6yO-dJ-pUd"/>
+                            <constraint firstItem="z2b-Pl-i34" firstAttribute="leading" secondItem="tYM-af-HME" secondAttribute="leading" id="CeV-gE-5T3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zgx-e1-EIm" secondAttribute="trailing" id="EOh-6L-c3f"/>
+                            <constraint firstItem="z2b-Pl-i34" firstAttribute="trailing" secondItem="tYM-af-HME" secondAttribute="trailing" id="EuC-D5-t3L"/>
+                            <constraint firstItem="Zgx-e1-EIm" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="GXv-AT-XLX"/>
+                            <constraint firstItem="tYM-af-HME" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="N3Q-lT-D9M"/>
+                            <constraint firstItem="iAT-CY-xNA" firstAttribute="leading" secondItem="tYM-af-HME" secondAttribute="trailing" constant="16" id="Oq6-G0-ZTW"/>
+                            <constraint firstItem="z2b-Pl-i34" firstAttribute="top" secondItem="tYM-af-HME" secondAttribute="bottom" constant="16" id="Ryd-LB-oR1"/>
+                            <constraint firstItem="6As-me-K0a" firstAttribute="trailing" secondItem="iAT-CY-xNA" secondAttribute="trailing" id="S4K-Q6-sez"/>
+                            <constraint firstItem="tYM-af-HME" firstAttribute="top" secondItem="Zgx-e1-EIm" secondAttribute="bottom" constant="16" id="TG2-W4-mpQ"/>
+                            <constraint firstItem="6As-me-K0a" firstAttribute="centerY" secondItem="z2b-Pl-i34" secondAttribute="centerY" id="bq1-cP-fqU"/>
+                            <constraint firstItem="iAT-CY-xNA" firstAttribute="centerY" secondItem="tYM-af-HME" secondAttribute="centerY" id="cHD-E2-KYT"/>
+                            <constraint firstItem="Zgx-e1-EIm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="di0-gl-llz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Y9l-L2-E1l" secondAttribute="trailing" constant="16" id="foI-6P-mNc"/>
+                            <constraint firstItem="6As-me-K0a" firstAttribute="leading" secondItem="iAT-CY-xNA" secondAttribute="leading" id="mVC-TL-JGa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Y9l-L2-E1l" secondAttribute="bottom" constant="16" id="obc-V9-0gk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="CircularProgress" id="28a-k4-g2G"/>
+                    <connections>
+                        <outlet property="durationLabel" destination="tYM-af-HME" id="ib8-EI-OYM"/>
+                        <outlet property="durationStepper" destination="iAT-CY-xNA" id="vGy-8g-dv8"/>
+                        <outlet property="progressLabel" destination="z2b-Pl-i34" id="WJa-PA-NJa"/>
+                        <outlet property="progressTextField" destination="6As-me-K0a" id="ttP-tS-Pi7"/>
+                        <outlet property="skviewWrapper" destination="Zgx-e1-EIm" id="Grk-r0-n1H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1074" y="-83"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="VSI-Qe-GCb">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="695-Rj-gXZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nXL-v6-ZE0">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="PAo-KJ-G71"/>
+                        <segue destination="55z-Lz-OAD" kind="relationship" relationship="viewControllers" id="eN3-gE-8OI"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Ms-0h-daS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="133.5832083958021"/>
+        </scene>
+        <!--CircularTimer-->
+        <scene sceneID="Lpl-Aq-X6a">
+            <objects>
+                <viewController id="55z-Lz-OAD" customClass="CircularTimerViewController" customModule="RevolutionaryExamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hhq-do-a0e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rev. Duration" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jx9-dF-oNR">
+                                <rect key="frame" x="16" y="422" width="233" height="29"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="21"/>
+                                <color key="textColor" red="0.16862745100000001" green="0.25882352939999997" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zeb-nG-Qj7">
+                                <rect key="frame" x="16" y="673" width="343" height="40"/>
+                                <color key="backgroundColor" red="0.56862745100000001" green="0.70196078429999997" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="bpz-8d-AF8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
+                                <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="ANIMATE!"/>
+                                <connections>
+                                    <action selector="animateTapped:" destination="55z-Lz-OAD" eventType="primaryActionTriggered" id="tEo-G4-xfz"/>
+                                </connections>
+                            </button>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="6" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="BDQ-La-bLo">
+                                <rect key="frame" x="265" y="422" width="94" height="29"/>
+                                <color key="tintColor" red="0.56862745100000001" green="0.70196078429999997" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="durationStepperTapped:" destination="55z-Lz-OAD" eventType="valueChanged" id="TZ2-af-mKz"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Revolutions" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sT5-4F-hWZ">
+                                <rect key="frame" x="16" y="467" width="233" height="29"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="21"/>
+                                <color key="textColor" red="0.16862745100000001" green="0.25882352939999997" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clockwise" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pum-Kp-iTq">
+                                <rect key="frame" x="16" y="512" width="233" height="29"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="21"/>
+                                <color key="textColor" red="0.16862745100000001" green="0.25882352939999997" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zW9-Gw-oQC">
+                                <rect key="frame" x="287.66666666666669" y="511" width="51" height="31"/>
+                                <color key="onTintColor" red="0.56862745098039214" green="0.70196078431372544" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="thumbTintColor" red="0.35686274509803922" green="0.49019607843137253" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="clockwiseSwitchTapped:" destination="55z-Lz-OAD" eventType="valueChanged" id="r9S-Xn-n1V"/>
+                                </connections>
+                            </switch>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="S1P-dE-yhK">
+                                <rect key="frame" x="265" y="467" width="94" height="29"/>
+                                <color key="tintColor" red="0.56862745100000001" green="0.70196078429999997" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="revolutionsStepperTapped:" destination="55z-Lz-OAD" eventType="valueChanged" id="XB3-gj-i0T"/>
+                                </connections>
+                            </stepper>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7bb-mO-9nI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="406"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="BDQ-La-bLo" firstAttribute="leading" secondItem="Jx9-dF-oNR" secondAttribute="trailing" constant="16" id="0YU-4r-iV9"/>
+                            <constraint firstItem="7bb-mO-9nI" firstAttribute="leading" secondItem="VBa-5M-Grd" secondAttribute="leading" id="6Th-CB-n1p"/>
+                            <constraint firstItem="VBa-5M-Grd" firstAttribute="bottom" secondItem="Zeb-nG-Qj7" secondAttribute="bottom" constant="16" id="9rw-tj-caf"/>
+                            <constraint firstItem="7bb-mO-9nI" firstAttribute="top" secondItem="hhq-do-a0e" secondAttribute="top" id="Efk-7n-XRJ"/>
+                            <constraint firstItem="Jx9-dF-oNR" firstAttribute="leading" secondItem="VBa-5M-Grd" secondAttribute="leading" constant="16" id="EsN-Sy-DJi"/>
+                            <constraint firstItem="pum-Kp-iTq" firstAttribute="trailing" secondItem="sT5-4F-hWZ" secondAttribute="trailing" id="Jvp-4g-M3n"/>
+                            <constraint firstItem="sT5-4F-hWZ" firstAttribute="trailing" secondItem="Jx9-dF-oNR" secondAttribute="trailing" id="KK4-NK-Eea"/>
+                            <constraint firstItem="pum-Kp-iTq" firstAttribute="leading" secondItem="sT5-4F-hWZ" secondAttribute="leading" id="Ozd-By-cPi"/>
+                            <constraint firstItem="S1P-dE-yhK" firstAttribute="centerY" secondItem="sT5-4F-hWZ" secondAttribute="centerY" id="QXC-9X-pij"/>
+                            <constraint firstItem="zW9-Gw-oQC" firstAttribute="centerX" secondItem="S1P-dE-yhK" secondAttribute="centerX" id="RBN-hL-7ew"/>
+                            <constraint firstItem="pum-Kp-iTq" firstAttribute="top" secondItem="sT5-4F-hWZ" secondAttribute="bottom" constant="16" id="UZL-Bu-RKC"/>
+                            <constraint firstItem="7bb-mO-9nI" firstAttribute="height" secondItem="hhq-do-a0e" secondAttribute="height" multiplier="0.5" id="Uzn-pw-5u1"/>
+                            <constraint firstItem="sT5-4F-hWZ" firstAttribute="leading" secondItem="Jx9-dF-oNR" secondAttribute="leading" id="b41-gn-lUW"/>
+                            <constraint firstItem="S1P-dE-yhK" firstAttribute="centerX" secondItem="BDQ-La-bLo" secondAttribute="centerX" id="cqd-Zn-BFx"/>
+                            <constraint firstItem="VBa-5M-Grd" firstAttribute="trailing" secondItem="Zeb-nG-Qj7" secondAttribute="trailing" constant="16" id="fKa-VM-7cj"/>
+                            <constraint firstItem="sT5-4F-hWZ" firstAttribute="top" secondItem="Jx9-dF-oNR" secondAttribute="bottom" constant="16" id="fcv-r0-mEj"/>
+                            <constraint firstItem="VBa-5M-Grd" firstAttribute="trailing" secondItem="BDQ-La-bLo" secondAttribute="trailing" constant="16" id="g7r-U0-qP4"/>
+                            <constraint firstItem="zW9-Gw-oQC" firstAttribute="centerY" secondItem="pum-Kp-iTq" secondAttribute="centerY" id="ivH-dC-vw7"/>
+                            <constraint firstItem="VBa-5M-Grd" firstAttribute="trailing" secondItem="7bb-mO-9nI" secondAttribute="trailing" id="kcD-QF-c7T"/>
+                            <constraint firstItem="Zeb-nG-Qj7" firstAttribute="leading" secondItem="VBa-5M-Grd" secondAttribute="leading" constant="16" id="pHU-eB-jNg"/>
+                            <constraint firstItem="BDQ-La-bLo" firstAttribute="centerY" secondItem="Jx9-dF-oNR" secondAttribute="centerY" id="pRm-Jt-lLE"/>
+                            <constraint firstItem="Jx9-dF-oNR" firstAttribute="top" secondItem="7bb-mO-9nI" secondAttribute="bottom" constant="16" id="xu2-mU-Ocx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VBa-5M-Grd"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="CircularTimer" id="n3l-7C-aPB"/>
+                    <connections>
+                        <outlet property="durationLabel" destination="Jx9-dF-oNR" id="HuI-ix-epN"/>
+                        <outlet property="revolutionsLabel" destination="sT5-4F-hWZ" id="2qc-km-zis"/>
+                        <outlet property="skViewWrapper" destination="7bb-mO-9nI" id="Z4p-Wb-fs3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MQn-ce-MLa" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1073" y="627"/>
+        </scene>
+    </scenes>
+</document>
