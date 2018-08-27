@@ -68,16 +68,14 @@ public class CircularProgress: SKNode {
     
     public var circleLineWidth: CGFloat {
         didSet {
-            defaultBackground?.lineWidth = circleLineWidth
-            customBackground?.lineWidth = circleLineWidth
+            if hasDefaultBackground { background?.lineWidth = circleLineWidth }
             displayedCircle?.lineWidth = circleLineWidth
         }
     }
     
     public var lineCap: CGLineCap = .round {
         didSet {
-            defaultBackground?.lineCap = lineCap
-            customBackground?.lineCap = lineCap
+            if hasDefaultBackground { background?.lineCap = lineCap }
             displayedCircle?.lineCap = lineCap
         }
     }
@@ -85,83 +83,117 @@ public class CircularProgress: SKNode {
     /// Node that follows the tip of the circular progress.
     public var circleTip: SKShapeNode? {
         willSet {
-            guard let currentCircleTip = circleTip, newValue == nil else { return }
+            guard let currentCircleTip = circleTip else { return }
             currentCircleTip.removeFromParent()
         }
         didSet{
             guard let newCircleTip = circleTip else { return }
             addChild(newCircleTip)
             
-            positionCircleTip()
+            updateCircleTip()
         }
     }
     
-    /// Overrides the `CircularProgress.defaultBackground` property.
-    public var customBackground: SKShapeNode? {
+    /**
+     Background SKShapeNode of the animation.
+     The default is a background circle with the same radius and lineWidth of the progress circle.
+     
+     If no background is needed, just set this to nil.
+     */
+    public var background: SKShapeNode? {
         willSet {
-            guard let currentBackground = customBackground, newValue == nil else { return }
+            guard let currentBackground = background else { return }
             currentBackground.removeFromParent()
         }
         didSet{
-            guard let newBackground = customBackground else { return }
+            guard let newBackground = background else { return }
+            hasDefaultBackground = false
             
-            defaultBackground?.removeFromParent()
-            defaultBackground = nil
-            
+            newBackground.zPosition = -1
             addChild(newBackground)
         }
     }
     
-    /// Color of the background node. Affects both custom and default backgrounds.
-    public var backgroundColor: UIColor {
+    /**
+     Display style of the current progress state.
+     
+     **Defaults to `.none`**.
+     */
+    public var displayStyle: DisplayStyle = .none {
         didSet {
-            customBackground?.strokeColor = backgroundColor
-            defaultBackground?.strokeColor = backgroundColor
+            if displayStyle != .none && displayLabel == nil {
+                displayLabel = SKLabelNode()
+                displayLabel?.verticalAlignmentMode = .center
+                displayLabel?.horizontalAlignmentMode = .center
+            }
         }
     }
     
-    private var defaultBackground: SKShapeNode?
+    /**
+     Label that will be used to show the current `displayStyle`.
+     
+     **Defaults to nil**.
+     */
+    public var displayLabel: SKLabelNode? {
+        willSet {
+            guard let currentTextualFeedback = displayLabel else { return }
+            currentTextualFeedback.removeFromParent()
+        }
+        didSet {
+            guard let newTextualFeedback = displayLabel else { return }
+            
+            addChild(newTextualFeedback)
+            updateDisplay()
+        }
+    }
     
     // MARK: Auxiliar Properties
     
+    /**
+     Flag to help check when updates are made in the Circle properties,
+     so if there's a default background, it can be updated as well.
+     */
+    private var hasDefaultBackground: Bool = true
+    
     private var displayedCircle: SKShapeNode?
     private let animationKey = "circularProgressAnimation"
-    
+
     //TODO: Find the ratio between circleRadius and this value to make the animation seems fluid.
     //Also describe the currentProgress + progressInCircles better.
+    //BTW: NumberOfCircles isn't needed, this could be just some "auxiliar variable" inside the updateProgress function.
     private let numberOfCircles = 1000
     
-    //FIXME: currentProgress isn't correctly being updated with the UI
+    /**
+     Should be between 0 and 1 - every other value will be truncated to the next "valid" value.
+     
+     To update the progress, call `updateProgress(_: duration: completion:)`.
+     */
     public private(set) var currentProgress: CGFloat = 0
-    private var progressInCircles = 0
     
+    private var progressInCircles = 0
+    private var remainingDuration: TimeInterval = 0
     /**
      - Parameters:
          - radius: Radius of the CircularProgress.
          - width: Width of the circle line.
          - color: Color of the circle line.
-         - hasBackground: If the circle should display a background.
-         - progress: Should be between 0 and 1 - every other value will be truncated to the next "valid" value. **Defaults to 0**.
      */
     required public init(withRadius radius: CGFloat,
-                  width: CGFloat,
-                  color: UIColor,
-                  hasBackground: Bool = true,
-                  progress: CGFloat = 0) {
+                         width: CGFloat,
+                         color: UIColor) {
         self.circleRadius = radius
         self.circleLineWidth = width
         self.circleColor = color
-        self.backgroundColor = .lightGray
-        
         super.init()
         
-        self.currentProgress = validateProgress(progress)
-        self.progressInCircles = Int(currentProgress * CGFloat(numberOfCircles))
+        //Default Background
+        let background = circleNode(withStartAngle: 0, endAngle: 2 * CGFloat.pi)
+        background.strokeColor = .lightGray
+        background.zPosition = -1
         
-        if hasBackground {
-            defaultBackground = circleNode(withStartAngle: 0, endAngle: 2 * CGFloat.pi)
-            setupBackground()
-        }
+        addChild(background)
+        
+        self.background = background
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -171,7 +203,9 @@ public class CircularProgress: SKNode {
     // MARK: Public Functions
     
     /**
-     Changes the current progress based on the `clockwise` orientation of the revolution.
+     Changes the progress based on the current progress.
+     This means if `newProgress > currentProgress` the revolution orientation will be clockwise,
+     otherwise will be counterclockwise.
      
      - Parameters:
         - newProgress: New value of the circular progress. Should be between 0 and 1.
@@ -179,13 +213,15 @@ public class CircularProgress: SKNode {
      */
     public func updateProgress(_ newProgress: CGFloat, duration: TimeInterval = 1, completion: (() -> Void)? = nil) {
         let verifiedNewProgress = validateProgress(newProgress)
+        remainingDuration = duration
         
         //Find the diff between the newProgress and the currentOne
         let progressDiff = (verifiedNewProgress - currentProgress).rounded(toPlaces: 3)
         let progressDiffUnits = Int(progressDiff * CGFloat(numberOfCircles))
         if progressDiffUnits == 0 { return }
         
-        let newCirclesAmount = progressInCircles + progressDiffUnits //new "amount" of circles displayed
+        //new "amount" of circles displayed
+        let newCirclesAmount = progressInCircles + progressDiffUnits
         
         //How much time does every animation will need (as it'll be put inside a sequence)
         let animationTimespan = duration / Double(abs(progressDiffUnits))
@@ -195,13 +231,12 @@ public class CircularProgress: SKNode {
         
         //Reversed means that the the progress is going "backwards"
         let reversed = progressDiff < 0
+        let orientationModifier = reversed ? -1 : 1
         
         let initialAngle = CGFloat.pi / 2
         let circleUnit = (2 * CGFloat.pi) / CGFloat(numberOfCircles)
         
         while progressInCircles != newCirclesAmount {
-            let orientationModifier = reversed ? -1 : 1
-            
             //Building Current Circle
             var showNewCircle: SKAction
             if progressInCircles < (numberOfCircles + (reversed ? +1 : -1)) && progressInCircles > 0 {
@@ -228,12 +263,16 @@ public class CircularProgress: SKNode {
                 hideCurrentCircle = SKAction.run { }
             }
             
+            let updateProgress = SKAction.run {
+                let progressStep = CGFloat(orientationModifier) / CGFloat(self.numberOfCircles)
+                self.update(progress: progressStep, duration: animationTimespan)
+            }
+            
             //Sequencing iteration respective actions
-            fadesActions.append(SKAction.sequence([showNewCircle, hideCurrentCircle, wait]))
+            let animationSwapSequence = SKAction.sequence([showNewCircle, hideCurrentCircle, updateProgress, wait])
+            fadesActions.append(animationSwapSequence)
             progressInCircles += orientationModifier
         }
-        
-        currentProgress = verifiedNewProgress
         
         run(SKAction.sequence(fadesActions), withKey: animationKey) {
             completion?()
@@ -248,49 +287,34 @@ public class CircularProgress: SKNode {
         - completed: If the desired reset state is completed or not. **Defaults to false**.
      */
     public func reset(completed: Bool = false) {
-        removeAllChildren()
         removeAllActions()
+        displayedCircle?.removeFromParent()
         
         currentProgress = completed ? 1 : 0
         progressInCircles = completed ? numberOfCircles : 0
-        
-        if defaultBackground != nil || customBackground != nil {
-            setupBackground()
-        }
         
         if completed {
             let completedCircle = circleNode(withStartAngle: 0, endAngle: 2 * CGFloat.pi)
             completedCircle.strokeColor = circleColor
             
+            addChild(completedCircle)
+            
             displayedCircle = completedCircle
         } else {
             displayedCircle = nil
         }
+        
+        updateCircleTip()
+        updateDisplay()
     }
     
     // MARK: Auxiliar Functions
     
-    //TODO: CircleTip
-    private func positionCircleTip() {
-        guard let availableCircleTip = circleTip else { return }
-        
-        //Logic to place the circle tip at the end of the last visible circle
-    }
-    
-    //FIXME: Background approach
-    private func setupBackground() {
-        var background: SKShapeNode
-        
-        if let customBackground = customBackground {
-            background = customBackground
-        } else {
-            background = circleNode(withStartAngle: 0, endAngle: 2 * CGFloat.pi)
-        }
-        
-        background.strokeColor = backgroundColor
-        background.zPosition = -1
-        
-        addChild(background)
+    private func update(progress: CGFloat, duration: TimeInterval) {
+        currentProgress += progress
+        remainingDuration -= duration
+        updateCircleTip()
+        updateDisplay()
     }
     
     private func validateProgress(_ progress: CGFloat) -> CGFloat {
@@ -337,5 +361,53 @@ public class CircularProgress: SKNode {
         
         node.path = nil
         node.removeFromParent()
+    }
+}
+
+// MARK: UI Auxiliar Functions
+
+extension CircularProgress {
+    //TODO: CircleTip
+    private func updateCircleTip() {
+        guard let availableCircleTip = circleTip else { return }
+        
+        //Logic to place the circle tip at the end of the last visible circle
+    }
+    
+    private func updateDisplay() {
+        guard let availableDisplay = displayLabel else { return }
+        let duration = Int(remainingDuration) + 1
+        
+        switch displayStyle {
+        case .percentage:
+            let printableProgress = String(format: "%.2f", currentProgress * 100)
+            availableDisplay.text = "\(printableProgress)%"
+            
+        case .simpleRemainingTime:
+            availableDisplay.text = "\(duration)"
+            
+        case .compactedRemainingTime:
+            let hours = duration / 3600
+            let hoursAvailable = hours > 0
+            let minutes = (duration / 60) % 60
+            let minutesAvailable = minutes > 0
+            let seconds = duration % 60
+            
+            if hoursAvailable {
+                availableDisplay.text = String(format: "%02i:%02i:%02i", hours, minutes, seconds)
+            } else if minutesAvailable {
+                availableDisplay.text = String(format: "%02i:%02i", minutes, seconds)
+            } else {
+                availableDisplay.text = String(format: "%02i", seconds)
+            }
+            
+        case .fullRemainingTime:
+            let hours = duration / 3600
+            let minutes = (duration / 60) % 60
+            let seconds = duration % 60
+            availableDisplay.text = String(format: "%02i:%02i:%02i", hours, minutes, seconds)
+            
+        default: break
+        }
     }
 }

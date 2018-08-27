@@ -148,8 +148,8 @@
 		DD41AEDA2132533B00776D43 /* CircularProgress */ = {
 			isa = PBXGroup;
 			children = (
-				DD41AEDC2132533B00776D43 /* CircularProgressViewController.swift */,
 				DD41AEDB2132533B00776D43 /* CircularProgressScene.swift */,
+				DD41AEDC2132533B00776D43 /* CircularProgressViewController.swift */,
 			);
 			path = CircularProgress;
 			sourceTree = "<group>";
