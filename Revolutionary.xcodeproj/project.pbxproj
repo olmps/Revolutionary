@@ -27,6 +27,11 @@
 		DD41AEF3213253A400776D43 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEC32132508100776D43 /* CGFloat.swift */; };
 		DD41AEF4213253A400776D43 /* CircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEBF2132508100776D43 /* CircularProgress.swift */; };
 		DD41AEF5213253A400776D43 /* CircularTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEBC2132508100776D43 /* CircularTimer.swift */; };
+		DDDB6E782133941700A4C79C /* SKNode+SKAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEC12132508100776D43 /* SKNode+SKAction.swift */; };
+		DDDB6E792133941700A4C79C /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEC22132508100776D43 /* Typealias.swift */; };
+		DDDB6E7A2133941700A4C79C /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEC32132508100776D43 /* CGFloat.swift */; };
+		DDDB6E7B2133941700A4C79C /* CircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEBF2132508100776D43 /* CircularProgress.swift */; };
+		DDDB6E7C2133941700A4C79C /* CircularTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEBC2132508100776D43 /* CircularTimer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +53,7 @@
 		DD41AEE12132533B00776D43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD41AEE32132533B00776D43 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		DD41AEE42132533B00776D43 /* CGFloat+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Random.swift"; sourceTree = "<group>"; };
+		DDDB6E702133937900A4C79C /* Revolutionary_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Revolutionary_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DD41AEA62132504800776D43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDDB6E6C2133937900A4C79C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -82,6 +95,7 @@
 			children = (
 				DD41AE9A2132500800776D43 /* Revolutionary.framework */,
 				DD41AEA92132504800776D43 /* Demo.app */,
+				DDDB6E702133937900A4C79C /* Revolutionary_watchOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -219,6 +233,23 @@
 			productReference = DD41AEA92132504800776D43 /* Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DDDB6E6F2133937900A4C79C /* Revolutionary-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDDB6E772133937900A4C79C /* Build configuration list for PBXNativeTarget "Revolutionary-watchOS" */;
+			buildPhases = (
+				DDDB6E6B2133937900A4C79C /* Sources */,
+				DDDB6E6C2133937900A4C79C /* Frameworks */,
+				DDDB6E6E2133937900A4C79C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Revolutionary-watchOS";
+			productName = "Revolutionary-watchOS";
+			productReference = DDDB6E702133937900A4C79C /* Revolutionary_watchOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -237,6 +268,9 @@
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 0940;
 					};
+					DDDB6E6F2133937900A4C79C = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
 				};
 			};
 			buildConfigurationList = DD41AE942132500800776D43 /* Build configuration list for PBXProject "Revolutionary" */;
@@ -254,6 +288,7 @@
 			targets = (
 				DD41AEA82132504800776D43 /* Demo */,
 				DD41AE992132500800776D43 /* Revolutionary */,
+				DDDB6E6F2133937900A4C79C /* Revolutionary-watchOS */,
 			);
 		};
 /* End PBXProject section */
@@ -266,6 +301,13 @@
 				DD41AEEE2132533B00776D43 /* Main.storyboard in Resources */,
 				DD41AEED2132533B00776D43 /* LaunchScreen.storyboard in Resources */,
 				DD41AEB32132504A00776D43 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDDB6E6E2133937900A4C79C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +342,18 @@
 				DD41AEE92132533B00776D43 /* CircularTimerScene.swift in Sources */,
 				DD41AEEA2132533B00776D43 /* CircularProgressScene.swift in Sources */,
 				DD41AEE82132533B00776D43 /* CircularTimerViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDDB6E6B2133937900A4C79C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDDB6E782133941700A4C79C /* SKNode+SKAction.swift in Sources */,
+				DDDB6E792133941700A4C79C /* Typealias.swift in Sources */,
+				DDDB6E7A2133941700A4C79C /* CGFloat.swift in Sources */,
+				DDDB6E7B2133941700A4C79C /* CircularProgress.swift in Sources */,
+				DDDB6E7C2133941700A4C79C /* CircularTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,6 +585,64 @@
 			};
 			name = Release;
 		};
+		DDDB6E752133937900A4C79C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/watchOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gmatuella.Revolutionary-watchOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3;
+			};
+			name = Debug;
+		};
+		DDDB6E762133937900A4C79C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/watchOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gmatuella.Revolutionary-watchOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -557,6 +669,15 @@
 			buildConfigurations = (
 				DD41AEB92132504A00776D43 /* Debug */,
 				DD41AEBA2132504A00776D43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDDB6E772133937900A4C79C /* Build configuration list for PBXNativeTarget "Revolutionary-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDDB6E752133937900A4C79C /* Debug */,
+				DDDB6E762133937900A4C79C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
