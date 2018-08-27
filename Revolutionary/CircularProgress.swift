@@ -11,6 +11,47 @@ import SpriteKit
 //TODO: Create class description
 public class CircularProgress: SKNode {
     
+    /// A Central display style to see the current state of the CircularProgress.
+    public enum DisplayStyle {
+        /// Nothing will be displayed
+        case none
+        
+        /**
+         The display will be formatted relative to the remaining time
+         and will probably the most simple scenario.
+         
+         ## Examples:
+         - 80 remaining seconds will output 80;
+         - 3666 remaining seconds will output 3666.
+         */
+        case simpleRemainingTime
+        
+        /**
+         The display will be formatted relative to the remaining time
+         with a more compacted style.
+         
+         ## Examples:
+         - 80 remaining seconds will output 01:20;
+         - 3666 remaining seconds will output 01:01:06.
+         */
+        case compactedRemainingTime
+        
+        /**
+         The display will be formatted relative to the remaining time
+         with a full description.
+         
+         ## Examples:
+            - 80 remaining seconds will output 00:01:15;
+            - 3666 remaining seconds will output 01:01:06.
+         */
+        case fullRemainingTime
+        
+        /**
+         The current progress percentage.
+         */
+        case percentage
+    }
+    
     // MARK: UI Properties
     
     public var isAnimating: Bool {
