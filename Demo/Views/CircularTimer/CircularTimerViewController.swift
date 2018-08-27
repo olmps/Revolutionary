@@ -22,18 +22,22 @@ class CircularTimerViewController: UIViewController {
     private var circularTimerScene: CircularTimerScene!
     @IBOutlet private weak var skViewWrapper: UIView!
     
+    //Need to call on viewDidAppear because the `skviewWrapper`
+    //does not contains its correct contentSize yet.
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        duration = 6
-        revolutions = 3
-        
-        skview = SKView(frame: skViewWrapper.frame)
-        skViewWrapper.addSubview(skview)
-        
-        circularTimerScene = CircularTimerScene(size: skview.bounds.size)
-        skview.presentScene(circularTimerScene)
-        skview.showsDrawCount = true
-        skview.showsNodeCount = true
+        if skview == nil {
+            duration = 6
+            revolutions = 3
+            
+            skview = SKView(frame: skViewWrapper.frame)
+            skViewWrapper.addSubview(skview)
+            
+            circularTimerScene = CircularTimerScene(size: skview.bounds.size)
+            skview.presentScene(circularTimerScene)
+            skview.showsDrawCount = true
+            skview.showsNodeCount = true
+        }
     }
     
     @IBAction private func durationStepperTapped(_ sender: UIStepper) {
