@@ -37,13 +37,15 @@ class CircularProgressViewController: UIViewController {
     //does not contains its correct contentSize yet.
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        skview = SKView(frame: skviewWrapper.frame)
-        skviewWrapper.addSubview(skview)
-        
-        circularProgressScene = CircularProgressScene(size: skview.bounds.size)
-        skview.presentScene(circularProgressScene)
-        skview.showsDrawCount = true
-        skview.showsNodeCount = true
+        if skview == nil {
+            skview = SKView(frame: skviewWrapper.frame)
+            skviewWrapper.addSubview(skview)
+            
+            circularProgressScene = CircularProgressScene(size: skview.bounds.size)
+            skview.presentScene(circularProgressScene)
+            skview.showsDrawCount = true
+            skview.showsNodeCount = true
+        }
     }
     
     @objc private func dismissKeyboard() {
