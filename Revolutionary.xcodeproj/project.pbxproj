@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD0F470921380EBC00D8A7CD /* CircularProgressBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0F470821380EBC00D8A7CD /* CircularProgressBuilder.swift */; };
+		DD0F470A213810F300D8A7CD /* CircularProgressBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0F470821380EBC00D8A7CD /* CircularProgressBuilder.swift */; };
+		DD0F470B213810F900D8A7CD /* CircularProgressBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0F470821380EBC00D8A7CD /* CircularProgressBuilder.swift */; };
+		DD0F470C2138155600D8A7CD /* ProgressScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEDB2132533B00776D43 /* ProgressScene.swift */; };
+		DD0F470D2138155600D8A7CD /* ProgressScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEDB2132533B00776D43 /* ProgressScene.swift */; };
+		DD0F47112138189C00D8A7CD /* TimerScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0F47102138189C00D8A7CD /* TimerScene.swift */; };
+		DD0F47122138192F00D8A7CD /* TimerScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0F47102138189C00D8A7CD /* TimerScene.swift */; };
+		DD0F47132138192F00D8A7CD /* TimerScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0F47102138189C00D8A7CD /* TimerScene.swift */; };
+		DD10475F21414F0E004A53EB /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD10475021414F0E004A53EB /* Constraints.swift */; };
+		DD10476021414F0E004A53EB /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD10475121414F0E004A53EB /* Stack.swift */; };
+		DD10476121414F0E004A53EB /* Abstraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD10475221414F0E004A53EB /* Abstraction.swift */; };
+		DD10476221414F0E004A53EB /* TinyEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD10475321414F0E004A53EB /* TinyEdgeInsets.swift */; };
+		DD10476321414F0E004A53EB /* TinyConstraints+superview.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD10475421414F0E004A53EB /* TinyConstraints+superview.swift */; };
+		DD10476421414F0E004A53EB /* TinyConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD10475521414F0E004A53EB /* TinyConstraints.swift */; };
+		DD10476521414F0E004A53EB /* Constrainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD10475621414F0E004A53EB /* Constrainable.swift */; };
 		DD41AEB32132504A00776D43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD41AEB22132504A00776D43 /* Assets.xcassets */; };
 		DD41AEC52132508200776D43 /* CircularTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEBC2132508100776D43 /* CircularTimer.swift */; };
 		DD41AEC82132508200776D43 /* CircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEBF2132508100776D43 /* CircularProgress.swift */; };
@@ -14,8 +29,7 @@
 		DD41AECA2132508200776D43 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEC22132508100776D43 /* Typealias.swift */; };
 		DD41AECB2132508200776D43 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEC32132508100776D43 /* CGFloat.swift */; };
 		DD41AEE82132533B00776D43 /* CircularTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AED82132533B00776D43 /* CircularTimerViewController.swift */; };
-		DD41AEE92132533B00776D43 /* CircularTimerScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AED92132533B00776D43 /* CircularTimerScene.swift */; };
-		DD41AEEA2132533B00776D43 /* CircularProgressScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEDB2132533B00776D43 /* CircularProgressScene.swift */; };
+		DD41AEEA2132533B00776D43 /* ProgressScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEDB2132533B00776D43 /* ProgressScene.swift */; };
 		DD41AEEB2132533B00776D43 /* CircularProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEDC2132533B00776D43 /* CircularProgressViewController.swift */; };
 		DD41AEEC2132533B00776D43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEDD2132533B00776D43 /* AppDelegate.swift */; };
 		DD41AEED2132533B00776D43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD41AEDF2132533B00776D43 /* LaunchScreen.storyboard */; };
@@ -35,6 +49,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD0F470821380EBC00D8A7CD /* CircularProgressBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBuilder.swift; sourceTree = "<group>"; };
+		DD0F47102138189C00D8A7CD /* TimerScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerScene.swift; sourceTree = "<group>"; };
+		DD10475021414F0E004A53EB /* Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
+		DD10475121414F0E004A53EB /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		DD10475221414F0E004A53EB /* Abstraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Abstraction.swift; sourceTree = "<group>"; };
+		DD10475321414F0E004A53EB /* TinyEdgeInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TinyEdgeInsets.swift; sourceTree = "<group>"; };
+		DD10475421414F0E004A53EB /* TinyConstraints+superview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TinyConstraints+superview.swift"; sourceTree = "<group>"; };
+		DD10475521414F0E004A53EB /* TinyConstraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TinyConstraints.swift; sourceTree = "<group>"; };
+		DD10475621414F0E004A53EB /* Constrainable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constrainable.swift; sourceTree = "<group>"; };
 		DD41AE9A2132500800776D43 /* Revolutionary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Revolutionary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD41AEA92132504800776D43 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD41AEB22132504A00776D43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,8 +68,7 @@
 		DD41AEC22132508100776D43 /* Typealias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		DD41AEC32132508100776D43 /* CGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
 		DD41AED82132533B00776D43 /* CircularTimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularTimerViewController.swift; sourceTree = "<group>"; };
-		DD41AED92132533B00776D43 /* CircularTimerScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularTimerScene.swift; sourceTree = "<group>"; };
-		DD41AEDB2132533B00776D43 /* CircularProgressScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressScene.swift; sourceTree = "<group>"; };
+		DD41AEDB2132533B00776D43 /* ProgressScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressScene.swift; sourceTree = "<group>"; };
 		DD41AEDC2132533B00776D43 /* CircularProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressViewController.swift; sourceTree = "<group>"; };
 		DD41AEDD2132533B00776D43 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD41AEDF2132533B00776D43 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -81,6 +103,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD0F470E2138187F00D8A7CD /* CircularProgress */ = {
+			isa = PBXGroup;
+			children = (
+				DD41AEBF2132508100776D43 /* CircularProgress.swift */,
+				DD0F470821380EBC00D8A7CD /* CircularProgressBuilder.swift */,
+				DD41AEDB2132533B00776D43 /* ProgressScene.swift */,
+			);
+			path = CircularProgress;
+			sourceTree = "<group>";
+		};
+		DD0F470F2138188D00D8A7CD /* CircularTimer */ = {
+			isa = PBXGroup;
+			children = (
+				DD41AEBC2132508100776D43 /* CircularTimer.swift */,
+				DD0F47102138189C00D8A7CD /* TimerScene.swift */,
+			);
+			path = CircularTimer;
+			sourceTree = "<group>";
+		};
+		DD10474D21414F0E004A53EB /* TinyConstraints */ = {
+			isa = PBXGroup;
+			children = (
+				DD10474F21414F0E004A53EB /* Classes */,
+			);
+			path = TinyConstraints;
+			sourceTree = "<group>";
+		};
+		DD10474F21414F0E004A53EB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DD10475021414F0E004A53EB /* Constraints.swift */,
+				DD10475121414F0E004A53EB /* Stack.swift */,
+				DD10475221414F0E004A53EB /* Abstraction.swift */,
+				DD10475321414F0E004A53EB /* TinyEdgeInsets.swift */,
+				DD10475421414F0E004A53EB /* TinyConstraints+superview.swift */,
+				DD10475521414F0E004A53EB /* TinyConstraints.swift */,
+				DD10475621414F0E004A53EB /* Constrainable.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		DD41AE902132500800776D43 = {
 			isa = PBXGroup;
 			children = (
@@ -103,9 +166,9 @@
 		DD41AE9C2132500800776D43 /* Revolutionary */ = {
 			isa = PBXGroup;
 			children = (
+				DD0F470F2138188D00D8A7CD /* CircularTimer */,
+				DD0F470E2138187F00D8A7CD /* CircularProgress */,
 				DD41AEC02132508100776D43 /* Extensions */,
-				DD41AEBF2132508100776D43 /* CircularProgress.swift */,
-				DD41AEBC2132508100776D43 /* CircularTimer.swift */,
 			);
 			path = Revolutionary;
 			sourceTree = "<group>";
@@ -113,6 +176,7 @@
 		DD41AEAA2132504800776D43 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				DD10474D21414F0E004A53EB /* TinyConstraints */,
 				DD41AEE22132533B00776D43 /* Extensions */,
 				DD41AED32132533B00776D43 /* Resources */,
 				DD41AEDE2132533B00776D43 /* Storyboards */,
@@ -144,28 +208,10 @@
 		DD41AED62132533B00776D43 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DD41AED72132533B00776D43 /* CircularTimer */,
-				DD41AEDA2132533B00776D43 /* CircularProgress */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		DD41AED72132533B00776D43 /* CircularTimer */ = {
-			isa = PBXGroup;
-			children = (
-				DD41AED92132533B00776D43 /* CircularTimerScene.swift */,
 				DD41AED82132533B00776D43 /* CircularTimerViewController.swift */,
-			);
-			path = CircularTimer;
-			sourceTree = "<group>";
-		};
-		DD41AEDA2132533B00776D43 /* CircularProgress */ = {
-			isa = PBXGroup;
-			children = (
-				DD41AEDB2132533B00776D43 /* CircularProgressScene.swift */,
 				DD41AEDC2132533B00776D43 /* CircularProgressViewController.swift */,
 			);
-			path = CircularProgress;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		DD41AEDE2132533B00776D43 /* Storyboards */ = {
@@ -319,10 +365,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD41AECB2132508200776D43 /* CGFloat.swift in Sources */,
+				DD0F470921380EBC00D8A7CD /* CircularProgressBuilder.swift in Sources */,
+				DD0F47112138189C00D8A7CD /* TimerScene.swift in Sources */,
 				DD41AEC82132508200776D43 /* CircularProgress.swift in Sources */,
 				DD41AEC92132508200776D43 /* SKNode+SKAction.swift in Sources */,
 				DD41AEC52132508200776D43 /* CircularTimer.swift in Sources */,
 				DD41AECA2132508200776D43 /* Typealias.swift in Sources */,
+				DD0F470D2138155600D8A7CD /* ProgressScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,16 +380,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD41AEF1213253A400776D43 /* SKNode+SKAction.swift in Sources */,
+				DD10476321414F0E004A53EB /* TinyConstraints+superview.swift in Sources */,
+				DD10475F21414F0E004A53EB /* Constraints.swift in Sources */,
 				DD41AEF2213253A400776D43 /* Typealias.swift in Sources */,
+				DD0F47122138192F00D8A7CD /* TimerScene.swift in Sources */,
 				DD41AEF3213253A400776D43 /* CGFloat.swift in Sources */,
+				DD10476521414F0E004A53EB /* Constrainable.swift in Sources */,
 				DD41AEF4213253A400776D43 /* CircularProgress.swift in Sources */,
 				DD41AEF5213253A400776D43 /* CircularTimer.swift in Sources */,
+				DD10476421414F0E004A53EB /* TinyConstraints.swift in Sources */,
 				DD41AEEC2132533B00776D43 /* AppDelegate.swift in Sources */,
 				DD41AEEF2132533B00776D43 /* UIColor.swift in Sources */,
+				DD10476221414F0E004A53EB /* TinyEdgeInsets.swift in Sources */,
+				DD0F470B213810F900D8A7CD /* CircularProgressBuilder.swift in Sources */,
+				DD10476021414F0E004A53EB /* Stack.swift in Sources */,
+				DD10476121414F0E004A53EB /* Abstraction.swift in Sources */,
 				DD41AEEB2132533B00776D43 /* CircularProgressViewController.swift in Sources */,
 				DD41AEF02132533B00776D43 /* CGFloat+Random.swift in Sources */,
-				DD41AEE92132533B00776D43 /* CircularTimerScene.swift in Sources */,
-				DD41AEEA2132533B00776D43 /* CircularProgressScene.swift in Sources */,
+				DD41AEEA2132533B00776D43 /* ProgressScene.swift in Sources */,
 				DD41AEE82132533B00776D43 /* CircularTimerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,10 +407,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDDB6E782133941700A4C79C /* SKNode+SKAction.swift in Sources */,
+				DD0F470A213810F300D8A7CD /* CircularProgressBuilder.swift in Sources */,
+				DD0F47132138192F00D8A7CD /* TimerScene.swift in Sources */,
 				DDDB6E792133941700A4C79C /* Typealias.swift in Sources */,
 				DDDB6E7A2133941700A4C79C /* CGFloat.swift in Sources */,
 				DDDB6E7B2133941700A4C79C /* CircularProgress.swift in Sources */,
 				DDDB6E7C2133941700A4C79C /* CircularTimer.swift in Sources */,
+				DD0F470C2138155600D8A7CD /* ProgressScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,8 +556,9 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -511,6 +572,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmatuella.Revolutionary;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -523,8 +585,9 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -538,6 +601,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmatuella.Revolutionary;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -552,7 +616,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CV54LX9MG6;
 				INFOPLIST_FILE = "$(SRCROOT)/Demo/Resources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -573,7 +637,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CV54LX9MG6;
 				INFOPLIST_FILE = "$(SRCROOT)/Demo/Resources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

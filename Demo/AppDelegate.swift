@@ -15,6 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+        let progressVC = CircularProgressViewController()
+        progressVC.tabBarItem = UITabBarItem(title: "Progress", image: nil, tag: 0)
+        
+        let timerVC = CircularProgressViewController()
+        timerVC.tabBarItem = UITabBarItem(title: "Timer", image: nil, tag: 1)
+        
+        let tabBar = UITabBarController()
+        tabBar.viewControllers = [progressVC, timerVC]
+        
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.rootViewController = tabBar
+        window.makeKeyAndVisible()
+        
+        self.window = window
+        
         return true
     }
 }
