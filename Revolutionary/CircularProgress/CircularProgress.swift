@@ -8,56 +8,15 @@
 
 import SpriteKit
 
-/**
- Core class of Revolutionary framework. The way `CircularProgress` animates its content is using
- multiples SKShapeNodes managed by a [object pool](https://en.wikipedia.org/wiki/Object_pool_pattern),
- all of this is due to the lack of possibility of animating a `SKShapeNode.path`.
- 
- Although this approach comes with a decent CPU usage, the SKShapeNode memory leaks become much
- less significant.
- */
-open class CircularProgress: SKNode {
-    
-    /// A Central display style to see the current state of the CircularProgress.
-    public enum DisplayStyle {
-        /// Nothing will be displayed
-        case none
-        
-        /**
-         The display will be formatted relative to the remaining time
-         and will probably the most simple scenario.
-         
-         ## Examples:
-         - 80 remaining seconds will output 80;
-         - 3666 remaining seconds will output 3666.
-         */
-        case simpleRemainingTime
-        
-        /**
-         The display will be formatted relative to the remaining time
-         with a more compacted style.
-         
-         ## Examples:
-         - 80 remaining seconds will output 01:20;
-         - 3666 remaining seconds will output 01:01:06.
-         */
-        case compactedRemainingTime
-        
-        /**
-         The display will be formatted relative to the remaining time
-         with a full description.
-         
-         ## Examples:
-         - 80 remaining seconds will output 00:01:15;
-         - 3666 remaining seconds will output 01:01:06.
-         */
-        case fullRemainingTime
-        
-        /**
-         The current progress percentage.
-         */
-        case percentage
-    }
+protocol CircularProgressDelegate: class {
+    func circularProgress(_ circularProgress: CircularProgress,
+                          updatedProgress progress: CGFloat,
+                          withRemainingDuration remainingDuration: TimeInterval
+                          )
+}
+
+//TODO: Create class description
+public class CircularProgress: SKNode {
     
     // MARK: UI Properties
     
@@ -112,17 +71,6 @@ open class CircularProgress: SKNode {
     }
     
     /**
-     Display style of the current progress state.
-     
-     **Defaults to `.none`**.
-     */
-    public var displayStyle: DisplayStyle = .none {
-        didSet {
-            updateDisplay()
-        }
-    }
-    
-    /**
      Label that will be used to show the current `displayStyle`.
      
      **Defaults to nil**.
@@ -136,7 +84,7 @@ open class CircularProgress: SKNode {
             guard let newTextualFeedback = displayLabel else { return }
             
             addChild(newTextualFeedback)
-            updateDisplay()
+            updatePercentage()
         }
     }
     
@@ -165,7 +113,7 @@ open class CircularProgress: SKNode {
     private(set) var targetDuration: TimeInterval = 0
     
     /// When finishing the `updateProgress(_: duration: completion:)` animation, this completion should be called.
-    private var targetCompletion: (() -> Void)?
+    private var targetCompletion: Completion?
     
     /// Remaining duration when updating the progress (from `duration` to 0)
     public var remainingDuration: TimeInterval {
@@ -182,10 +130,6 @@ open class CircularProgress: SKNode {
     private let startAngle: CGFloat = CGFloat.pi / 2
     private let fullRevolution: CGFloat = 2 * CGFloat.pi
     
-    //Duration Updates
-    private var durationShouldUpdateProgress: Bool = false
-    private var changedDuration: TimeInterval?
-    
     /**
      - Parameters:
      - radius: Radius of the CircularProgress.
@@ -194,9 +138,9 @@ open class CircularProgress: SKNode {
      - clockwise: If the animation should start counter-clockwise or clockwise.
      */
     public init(withRadius radius: CGFloat,
-                         width: CGFloat,
-                         color: UIColor,
-                         clockwise: Bool) {
+                width: CGFloat,
+                color: UIColor,
+                clockwise: Bool) {
         self.circleRadius = radius
         self.circleLineWidth = width
         self.circleColor = color
@@ -208,7 +152,6 @@ open class CircularProgress: SKNode {
         addDefaultDisplayLabel()
     }
     
-    /// Helper to init the desired properties using a [Builder](https://en.wikipedia.org/wiki/Builder_pattern).
     public init(withBuilder builder: CircularProgressBuilder?) {
         if let circleColor = builder?.circleColor {
             self.circleColor = circleColor
@@ -230,18 +173,6 @@ open class CircularProgress: SKNode {
             self.clockwise = clockwise
         }
         
-        if let displayStyle = builder?.displayStyle {
-            self.displayStyle = displayStyle
-        }
-        
-        if let background = builder?.background {
-            self.background = background
-        }
-        
-        if let displayLabel = builder?.displayLabel {
-            self.displayLabel = displayLabel
-        }
-        
         super.init()
         
         if let background = builder?.background {
@@ -255,7 +186,7 @@ open class CircularProgress: SKNode {
         if let displayLabel = builder?.displayLabel {
             self.displayLabel = displayLabel
             addChild(displayLabel)
-            updateDisplay()
+            updatePercentage()
         } else {
             addDefaultDisplayLabel()
         }
@@ -331,7 +262,7 @@ open class CircularProgress: SKNode {
             //Building Current Circle
             var showNewCircle: SKAction
             if currentProgressUnits < (progressUnits + (isDecreasing ? 1 : -1)) && currentProgressUnits > 0 {
-                showNewCircle = SKAction.run {
+                showNewCircle = SKAction.run { [unowned self] in
                     self.returnShapeToPool(self.displayedCircle!)
                 }
             } else {
@@ -343,7 +274,7 @@ open class CircularProgress: SKNode {
             
             var hideCurrentCircle: SKAction
             if nextIndex < progressUnits && nextIndex > 0 {
-                hideCurrentCircle = SKAction.run {
+                hideCurrentCircle = SKAction.run { [unowned self] in
                     let endAngleChange = CGFloat(nextIndex) * circleUnit
                     
                     let nextCircle = self.circleNode(withStartAngle: self.startAngle,
@@ -356,7 +287,7 @@ open class CircularProgress: SKNode {
                 hideCurrentCircle = SKAction.run { }
             }
             
-            let updateProgress = SKAction.run {
+            let updateProgress = SKAction.run { [unowned self] in
                 let progressStep = CGFloat(orientationModifier) / CGFloat(progressUnits)
                 self.update(progress: progressStep, duration: animationTimespan)
             }
@@ -367,22 +298,36 @@ open class CircularProgress: SKNode {
             currentProgressUnits += orientationModifier
         }
         
-        run(SKAction.sequence(fadesActions), withKey: animationKey) {
+        run(SKAction.sequence(fadesActions), withKey: animationKey) { [unowned self] in
             self.elapsedTime = 0
             completion?()
         }
     }
     
-    /**
-     Updates the duration of the current progress (does not stop animating).
-     
-     - Parameters:
-       - duration: a `TimeInterval` to be added to the current progress. Both positive and negative values are accepted.
-       - updatingProgress: If the progress should be updated as well (normally this is the most common and intuitive way to visualize). **Defaults to true**.
-     */
-    open func updateDuration(_ duration: TimeInterval, updatingProgress: Bool = true) {
+    private var durationShouldUpdateProgress: Bool = false
+    private var changedDuration: TimeInterval?
+    
+    public func updateDuration(_ duration: TimeInterval, updatingProgress: Bool = true) {
         durationShouldUpdateProgress = updatingProgress
         changedDuration = duration
+    }
+    
+    private func update(duration: TimeInterval) {
+        changedDuration = nil
+        removeAllActions()
+        
+        let oldDuration = targetDuration
+        let newDuration = oldDuration + duration
+        
+        if durationShouldUpdateProgress && remainingDuration > 0 {
+            let newProgressRatio = oldDuration / newDuration
+            let newProgress = targetProgress > currentProgress ?
+                currentProgress * CGFloat(newProgressRatio) :
+                currentProgress / CGFloat(newProgressRatio)
+            currentProgress = newProgress > 1 ? 1 : newProgress
+        }
+        
+        updateProgress(targetProgress, duration: newDuration, completion: targetCompletion)
     }
     
     /**
@@ -390,9 +335,9 @@ open class CircularProgress: SKNode {
      
      When the property `isAnimating == true`, the reset will stop the current ongoing animation.
      - Parameters:
-        - completed: If the desired reset state is completed or not. **Defaults to false**.
+     - completed: If the desired reset state is completed or not. **Defaults to false**.
      */
-    open func reset(completed: Bool = false) {
+    public func reset(completed: Bool = false) {
         removeAllActions()
         displayedCircle?.removeFromParent()
         
@@ -409,34 +354,15 @@ open class CircularProgress: SKNode {
             displayedCircle = nil
         }
         
-        updateDisplay()
+        updatePercentage()
     }
     
     // MARK: Auxiliar Functions
     
-    private func update(duration: TimeInterval) {
-        changedDuration = nil
-        removeAllActions()
-        
-        let oldDuration = targetDuration
-        let newDuration = oldDuration + duration
-        
-        if durationShouldUpdateProgress && remainingDuration > 0 {
-            let newProgressRatio = oldDuration / newDuration
-            let newProgress = targetProgress > currentProgress ?
-                currentProgress * CGFloat(newProgressRatio) :
-                currentProgress / CGFloat(newProgressRatio)
-            
-            currentProgress = newProgress > 1 ? 1 : newProgress
-        }
-        
-        updateProgress(targetProgress, duration: newDuration, completion: targetCompletion)
-    }
-    
     private func update(progress: CGFloat, duration: TimeInterval) {
         currentProgress += progress
         elapsedTime += duration
-        updateDisplay()
+        updatePercentage()
         
         if let changedDuration = changedDuration {
             update(duration: changedDuration)
@@ -468,6 +394,11 @@ open class CircularProgress: SKNode {
         return node
     }
     
+    private func updatePercentage() {
+        let printableProgress = String(format: "%.2f", currentProgress * 100)
+        displayLabel?.text = "\(printableProgress)%"
+    }
+    
     // MARK: SKShapeNode Pooling
     
     private var shapePool = NSMutableArray()
@@ -490,49 +421,5 @@ open class CircularProgress: SKNode {
         
         node.path = nil
         node.removeFromParent()
-    }
-}
-
-// MARK: UI Auxiliar Functions
-
-extension CircularProgress {
-    
-    open func updateDisplay(_ text: String) {
-        displayLabel?.text = text
-    }
-    
-    private func updateDisplay() {
-        guard displayStyle != .none else { return }
-        
-        let duration = Int(remainingDuration) + 1
-        
-        switch displayStyle {
-        case .percentage:
-            let printableProgress = String(format: "%.2f", currentProgress * 100)
-            displayLabel?.text = "\(printableProgress)%"
-            
-        case .simpleRemainingTime:
-            displayLabel?.text = "\(duration)"
-            
-        case .compactedRemainingTime:
-            let hours = duration / 3600
-            let hoursAvailable = hours > 0
-            let minutes = (duration / 60) % 60
-            let seconds = duration % 60
-            
-            if hoursAvailable {
-                displayLabel?.text = String(format: "%02i:%02i:%02i", hours, minutes, seconds)
-            } else {
-                displayLabel?.text = String(format: "%02i:%02i", minutes, seconds)
-            }
-            
-        case .fullRemainingTime:
-            let hours = duration / 3600
-            let minutes = (duration / 60) % 60
-            let seconds = duration % 60
-            displayLabel?.text = String(format: "%02i:%02i:%02i", hours, minutes, seconds)
-            
-        default: break
-        }
     }
 }

@@ -24,6 +24,15 @@ open class TimerScene: SKScene {
     public init(size: CGSize, builder: CircularProgressBuilder?) {
         _timer = CircularTimer(withBuilder: builder)
         super.init(size: size)
+        commonInit()
+    }
+    
+    public override init(size: CGSize) {
+        super.init(size: size)
+    }
+    
+    public override init() {
+        super.init()
     }
     
     public required init?(coder aDecoder: NSCoder) {
@@ -32,6 +41,7 @@ open class TimerScene: SKScene {
     
     public func configure(_ circularProgressBuilder: CircularProgressBuilder?) {
         _timer = CircularTimer(withBuilder: circularProgressBuilder)
+        commonInit()
     }
     
     private func commonInit() {

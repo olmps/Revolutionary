@@ -34,13 +34,13 @@
 		DD41AEEC2132533B00776D43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEDD2132533B00776D43 /* AppDelegate.swift */; };
 		DD41AEED2132533B00776D43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD41AEDF2132533B00776D43 /* LaunchScreen.storyboard */; };
 		DD41AEEE2132533B00776D43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD41AEE02132533B00776D43 /* Main.storyboard */; };
-		DD41AEEF2132533B00776D43 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEE32132533B00776D43 /* UIColor.swift */; };
-		DD41AEF02132533B00776D43 /* CGFloat+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEE42132533B00776D43 /* CGFloat+Random.swift */; };
+		DD41AEF02132533B00776D43 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEE42132533B00776D43 /* Extensions.swift */; };
 		DD41AEF1213253A400776D43 /* SKNode+SKAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEC12132508100776D43 /* SKNode+SKAction.swift */; };
 		DD41AEF2213253A400776D43 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEC22132508100776D43 /* Typealias.swift */; };
 		DD41AEF3213253A400776D43 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEC32132508100776D43 /* CGFloat.swift */; };
 		DD41AEF4213253A400776D43 /* CircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEBF2132508100776D43 /* CircularProgress.swift */; };
 		DD41AEF5213253A400776D43 /* CircularTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEBC2132508100776D43 /* CircularTimer.swift */; };
+		DD846818218B88030044E39C /* RevolutionaryDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD846817218B88030044E39C /* RevolutionaryDemoViewController.swift */; };
 		DDDB6E782133941700A4C79C /* SKNode+SKAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEC12132508100776D43 /* SKNode+SKAction.swift */; };
 		DDDB6E792133941700A4C79C /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEC22132508100776D43 /* Typealias.swift */; };
 		DDDB6E7A2133941700A4C79C /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEC32132508100776D43 /* CGFloat.swift */; };
@@ -73,8 +73,8 @@
 		DD41AEDD2132533B00776D43 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD41AEDF2132533B00776D43 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD41AEE12132533B00776D43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DD41AEE32132533B00776D43 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		DD41AEE42132533B00776D43 /* CGFloat+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Random.swift"; sourceTree = "<group>"; };
+		DD41AEE42132533B00776D43 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		DD846817218B88030044E39C /* RevolutionaryDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevolutionaryDemoViewController.swift; sourceTree = "<group>"; };
 		DDDB6E702133937900A4C79C /* Revolutionary_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Revolutionary_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -177,11 +177,11 @@
 			isa = PBXGroup;
 			children = (
 				DD10474D21414F0E004A53EB /* TinyConstraints */,
-				DD41AEE22132533B00776D43 /* Extensions */,
 				DD41AED32132533B00776D43 /* Resources */,
 				DD41AEDE2132533B00776D43 /* Storyboards */,
 				DD41AED62132533B00776D43 /* Views */,
 				DD41AEDD2132533B00776D43 /* AppDelegate.swift */,
+				DD41AEE42132533B00776D43 /* Extensions.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -210,6 +210,7 @@
 			children = (
 				DD41AED82132533B00776D43 /* CircularTimerViewController.swift */,
 				DD41AEDC2132533B00776D43 /* CircularProgressViewController.swift */,
+				DD846817218B88030044E39C /* RevolutionaryDemoViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -221,15 +222,6 @@
 				DD41AEDF2132533B00776D43 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		DD41AEE22132533B00776D43 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				DD41AEE42132533B00776D43 /* CGFloat+Random.swift */,
-				DD41AEE32132533B00776D43 /* UIColor.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,6 +374,7 @@
 				DD41AEF1213253A400776D43 /* SKNode+SKAction.swift in Sources */,
 				DD10476321414F0E004A53EB /* TinyConstraints+superview.swift in Sources */,
 				DD10475F21414F0E004A53EB /* Constraints.swift in Sources */,
+				DD846818218B88030044E39C /* RevolutionaryDemoViewController.swift in Sources */,
 				DD41AEF2213253A400776D43 /* Typealias.swift in Sources */,
 				DD0F47122138192F00D8A7CD /* TimerScene.swift in Sources */,
 				DD41AEF3213253A400776D43 /* CGFloat.swift in Sources */,
@@ -390,13 +383,12 @@
 				DD41AEF5213253A400776D43 /* CircularTimer.swift in Sources */,
 				DD10476421414F0E004A53EB /* TinyConstraints.swift in Sources */,
 				DD41AEEC2132533B00776D43 /* AppDelegate.swift in Sources */,
-				DD41AEEF2132533B00776D43 /* UIColor.swift in Sources */,
 				DD10476221414F0E004A53EB /* TinyEdgeInsets.swift in Sources */,
 				DD0F470B213810F900D8A7CD /* CircularProgressBuilder.swift in Sources */,
 				DD10476021414F0E004A53EB /* Stack.swift in Sources */,
 				DD10476121414F0E004A53EB /* Abstraction.swift in Sources */,
 				DD41AEEB2132533B00776D43 /* CircularProgressViewController.swift in Sources */,
-				DD41AEF02132533B00776D43 /* CGFloat+Random.swift in Sources */,
+				DD41AEF02132533B00776D43 /* Extensions.swift in Sources */,
 				DD41AEEA2132533B00776D43 /* ProgressScene.swift in Sources */,
 				DD41AEE82132533B00776D43 /* CircularTimerViewController.swift in Sources */,
 			);
@@ -613,6 +605,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CV54LX9MG6;
 				INFOPLIST_FILE = "$(SRCROOT)/Demo/Resources/Info.plist";
@@ -623,6 +616,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmatuella.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -634,6 +628,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CV54LX9MG6;
 				INFOPLIST_FILE = "$(SRCROOT)/Demo/Resources/Info.plist";
@@ -644,6 +639,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmatuella.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

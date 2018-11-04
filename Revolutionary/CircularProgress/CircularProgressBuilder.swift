@@ -17,7 +17,6 @@ public class CircularProgressBuilder {
     
     public var background: SKShapeNode?
     
-    public var displayStyle: CircularProgress.DisplayStyle?
     public var displayLabel: SKLabelNode?
     public var shouldUpdateDisplay: Bool?
     

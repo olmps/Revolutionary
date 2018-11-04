@@ -10,7 +10,7 @@ import SpriteKit
 
 extension SKNode {
     
-    func run(_ action: SKAction, withKey key: String, completion: (() -> Void)?) {
+    func run(_ action: SKAction, withKey key: String, completion: Completion?) {
         if let completion = completion {
             let completionAction = SKAction.run(completion)
             let compositeAction = SKAction.sequence([action, completionAction])

@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let progressVC = CircularProgressViewController()
         progressVC.tabBarItem = UITabBarItem(title: "Progress", image: nil, tag: 0)
         
-        let timerVC = CircularProgressViewController()
+        let timerVC = CircularTimerViewController()
         timerVC.tabBarItem = UITabBarItem(title: "Timer", image: nil, tag: 1)
         
         let tabBar = UITabBarController()
