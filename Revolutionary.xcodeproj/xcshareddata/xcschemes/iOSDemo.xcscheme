@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DD41AEA82132504800776D43"
-               BuildableName = "Demo.app"
-               BlueprintName = "Demo"
+               BuildableName = "iOSDemo.app"
+               BlueprintName = "iOSDemo"
                ReferencedContainer = "container:Revolutionary.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DD41AEA82132504800776D43"
-            BuildableName = "Demo.app"
-            BlueprintName = "Demo"
+            BuildableName = "iOSDemo.app"
+            BlueprintName = "iOSDemo"
             ReferencedContainer = "container:Revolutionary.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -56,8 +56,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DD41AEA82132504800776D43"
-            BuildableName = "Demo.app"
-            BlueprintName = "Demo"
+            BuildableName = "iOSDemo.app"
+            BlueprintName = "iOSDemo"
             ReferencedContainer = "container:Revolutionary.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -75,8 +75,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DD41AEA82132504800776D43"
-            BuildableName = "Demo.app"
-            BlueprintName = "Demo"
+            BuildableName = "iOSDemo.app"
+            BlueprintName = "iOSDemo"
             ReferencedContainer = "container:Revolutionary.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

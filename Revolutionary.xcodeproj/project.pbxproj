@@ -7,52 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5209FEDC2219BFD000875E33 /* PropertiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5209FEDB2219BFD000875E33 /* PropertiesViewController.swift */; };
+		524B4E28221582F40048A6C3 /* RevolutionaryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F7128E2212C67900F781C4 /* RevolutionaryBuilder.swift */; };
+		524B4E2B22158FDF0048A6C3 /* ShowcasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B4E2A22158FDF0048A6C3 /* ShowcasesViewController.swift */; };
+		52A0601A221AED4E00A841D7 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A06019221AED4E00A841D7 /* UIExtensions.swift */; };
+		52F7128F2212C67900F781C4 /* RevolutionaryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F7128E2212C67900F781C4 /* RevolutionaryBuilder.swift */; };
+		52F7473C2217530600778273 /* RevolutionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F7473B2217530600778273 /* RevolutionaryView.swift */; };
+		52F7473D2217530600778273 /* RevolutionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F7473B2217530600778273 /* RevolutionaryView.swift */; };
+		52F7473E2217530600778273 /* RevolutionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F7473B2217530600778273 /* RevolutionaryView.swift */; };
 		DD41AEB32132504A00776D43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD41AEB22132504A00776D43 /* Assets.xcassets */; };
-		DD41AEC52132508200776D43 /* CircularTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEBC2132508100776D43 /* CircularTimer.swift */; };
-		DD41AEC82132508200776D43 /* CircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEBF2132508100776D43 /* CircularProgress.swift */; };
+		DD41AEC82132508200776D43 /* Revolutionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEBF2132508100776D43 /* Revolutionary.swift */; };
 		DD41AEC92132508200776D43 /* SKNode+SKAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEC12132508100776D43 /* SKNode+SKAction.swift */; };
-		DD41AECA2132508200776D43 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEC22132508100776D43 /* Typealias.swift */; };
-		DD41AECB2132508200776D43 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEC32132508100776D43 /* CGFloat.swift */; };
-		DD41AEE82132533B00776D43 /* CircularTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AED82132533B00776D43 /* CircularTimerViewController.swift */; };
-		DD41AEE92132533B00776D43 /* CircularTimerScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AED92132533B00776D43 /* CircularTimerScene.swift */; };
-		DD41AEEA2132533B00776D43 /* CircularProgressScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEDB2132533B00776D43 /* CircularProgressScene.swift */; };
-		DD41AEEB2132533B00776D43 /* CircularProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEDC2132533B00776D43 /* CircularProgressViewController.swift */; };
+		DD41AEEB2132533B00776D43 /* RevolutionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEDC2132533B00776D43 /* RevolutionaryViewController.swift */; };
 		DD41AEEC2132533B00776D43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEDD2132533B00776D43 /* AppDelegate.swift */; };
 		DD41AEED2132533B00776D43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD41AEDF2132533B00776D43 /* LaunchScreen.storyboard */; };
 		DD41AEEE2132533B00776D43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD41AEE02132533B00776D43 /* Main.storyboard */; };
-		DD41AEEF2132533B00776D43 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEE32132533B00776D43 /* UIColor.swift */; };
-		DD41AEF02132533B00776D43 /* CGFloat+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEE42132533B00776D43 /* CGFloat+Random.swift */; };
 		DD41AEF1213253A400776D43 /* SKNode+SKAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEC12132508100776D43 /* SKNode+SKAction.swift */; };
-		DD41AEF2213253A400776D43 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEC22132508100776D43 /* Typealias.swift */; };
-		DD41AEF3213253A400776D43 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEC32132508100776D43 /* CGFloat.swift */; };
-		DD41AEF4213253A400776D43 /* CircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEBF2132508100776D43 /* CircularProgress.swift */; };
-		DD41AEF5213253A400776D43 /* CircularTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEBC2132508100776D43 /* CircularTimer.swift */; };
+		DD41AEF4213253A400776D43 /* Revolutionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEBF2132508100776D43 /* Revolutionary.swift */; };
 		DDDB6E782133941700A4C79C /* SKNode+SKAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEC12132508100776D43 /* SKNode+SKAction.swift */; };
-		DDDB6E792133941700A4C79C /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEC22132508100776D43 /* Typealias.swift */; };
-		DDDB6E7A2133941700A4C79C /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEC32132508100776D43 /* CGFloat.swift */; };
-		DDDB6E7B2133941700A4C79C /* CircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEBF2132508100776D43 /* CircularProgress.swift */; };
-		DDDB6E7C2133941700A4C79C /* CircularTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEBC2132508100776D43 /* CircularTimer.swift */; };
+		DDDB6E7B2133941700A4C79C /* Revolutionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEBF2132508100776D43 /* Revolutionary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5209FEDB2219BFD000875E33 /* PropertiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesViewController.swift; sourceTree = "<group>"; };
+		524B4E2A22158FDF0048A6C3 /* ShowcasesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowcasesViewController.swift; sourceTree = "<group>"; };
+		52A06019221AED4E00A841D7 /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
+		52F7128E2212C67900F781C4 /* RevolutionaryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevolutionaryBuilder.swift; sourceTree = "<group>"; };
+		52F7473B2217530600778273 /* RevolutionaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevolutionaryView.swift; sourceTree = "<group>"; };
 		DD41AE9A2132500800776D43 /* Revolutionary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Revolutionary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD41AEA92132504800776D43 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD41AEA92132504800776D43 /* iOSDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD41AEB22132504A00776D43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD41AEB72132504A00776D43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DD41AEBC2132508100776D43 /* CircularTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularTimer.swift; sourceTree = "<group>"; };
-		DD41AEBF2132508100776D43 /* CircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgress.swift; sourceTree = "<group>"; };
+		DD41AEBF2132508100776D43 /* Revolutionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Revolutionary.swift; sourceTree = "<group>"; };
 		DD41AEC12132508100776D43 /* SKNode+SKAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKNode+SKAction.swift"; sourceTree = "<group>"; };
-		DD41AEC22132508100776D43 /* Typealias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
-		DD41AEC32132508100776D43 /* CGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
-		DD41AED82132533B00776D43 /* CircularTimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularTimerViewController.swift; sourceTree = "<group>"; };
-		DD41AED92132533B00776D43 /* CircularTimerScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularTimerScene.swift; sourceTree = "<group>"; };
-		DD41AEDB2132533B00776D43 /* CircularProgressScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressScene.swift; sourceTree = "<group>"; };
-		DD41AEDC2132533B00776D43 /* CircularProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressViewController.swift; sourceTree = "<group>"; };
+		DD41AEDC2132533B00776D43 /* RevolutionaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RevolutionaryViewController.swift; sourceTree = "<group>"; };
 		DD41AEDD2132533B00776D43 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD41AEDF2132533B00776D43 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD41AEE12132533B00776D43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DD41AEE32132533B00776D43 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		DD41AEE42132533B00776D43 /* CGFloat+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Random.swift"; sourceTree = "<group>"; };
 		DDDB6E702133937900A4C79C /* Revolutionary_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Revolutionary_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -81,11 +72,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		524B4E2922158FC40048A6C3 /* Showcases */ = {
+			isa = PBXGroup;
+			children = (
+				524B4E2A22158FDF0048A6C3 /* ShowcasesViewController.swift */,
+			);
+			path = Showcases;
+			sourceTree = "<group>";
+		};
 		DD41AE902132500800776D43 = {
 			isa = PBXGroup;
 			children = (
 				DD41AE9C2132500800776D43 /* Revolutionary */,
-				DD41AEAA2132504800776D43 /* Demo */,
+				DD41AEAA2132504800776D43 /* iOSDemo */,
 				DD41AE9B2132500800776D43 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,7 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				DD41AE9A2132500800776D43 /* Revolutionary.framework */,
-				DD41AEA92132504800776D43 /* Demo.app */,
+				DD41AEA92132504800776D43 /* iOSDemo.app */,
 				DDDB6E702133937900A4C79C /* Revolutionary_watchOS.framework */,
 			);
 			name = Products;
@@ -104,30 +103,29 @@
 			isa = PBXGroup;
 			children = (
 				DD41AEC02132508100776D43 /* Extensions */,
-				DD41AEBF2132508100776D43 /* CircularProgress.swift */,
-				DD41AEBC2132508100776D43 /* CircularTimer.swift */,
+				DD41AEBF2132508100776D43 /* Revolutionary.swift */,
+				52F7128E2212C67900F781C4 /* RevolutionaryBuilder.swift */,
+				52F7473B2217530600778273 /* RevolutionaryView.swift */,
 			);
 			path = Revolutionary;
 			sourceTree = "<group>";
 		};
-		DD41AEAA2132504800776D43 /* Demo */ = {
+		DD41AEAA2132504800776D43 /* iOSDemo */ = {
 			isa = PBXGroup;
 			children = (
-				DD41AEE22132533B00776D43 /* Extensions */,
 				DD41AED32132533B00776D43 /* Resources */,
 				DD41AEDE2132533B00776D43 /* Storyboards */,
 				DD41AED62132533B00776D43 /* Views */,
 				DD41AEDD2132533B00776D43 /* AppDelegate.swift */,
+				52A06019221AED4E00A841D7 /* UIExtensions.swift */,
 			);
-			path = Demo;
+			path = iOSDemo;
 			sourceTree = "<group>";
 		};
 		DD41AEC02132508100776D43 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				DD41AEC12132508100776D43 /* SKNode+SKAction.swift */,
-				DD41AEC22132508100776D43 /* Typealias.swift */,
-				DD41AEC32132508100776D43 /* CGFloat.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -144,28 +142,19 @@
 		DD41AED62132533B00776D43 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DD41AED72132533B00776D43 /* CircularTimer */,
-				DD41AEDA2132533B00776D43 /* CircularProgress */,
+				524B4E2922158FC40048A6C3 /* Showcases */,
+				DD41AEDA2132533B00776D43 /* Revolutionary */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		DD41AED72132533B00776D43 /* CircularTimer */ = {
+		DD41AEDA2132533B00776D43 /* Revolutionary */ = {
 			isa = PBXGroup;
 			children = (
-				DD41AED92132533B00776D43 /* CircularTimerScene.swift */,
-				DD41AED82132533B00776D43 /* CircularTimerViewController.swift */,
+				DD41AEDC2132533B00776D43 /* RevolutionaryViewController.swift */,
+				5209FEDB2219BFD000875E33 /* PropertiesViewController.swift */,
 			);
-			path = CircularTimer;
-			sourceTree = "<group>";
-		};
-		DD41AEDA2132533B00776D43 /* CircularProgress */ = {
-			isa = PBXGroup;
-			children = (
-				DD41AEDB2132533B00776D43 /* CircularProgressScene.swift */,
-				DD41AEDC2132533B00776D43 /* CircularProgressViewController.swift */,
-			);
-			path = CircularProgress;
+			path = Revolutionary;
 			sourceTree = "<group>";
 		};
 		DD41AEDE2132533B00776D43 /* Storyboards */ = {
@@ -175,15 +164,6 @@
 				DD41AEDF2132533B00776D43 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		DD41AEE22132533B00776D43 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				DD41AEE42132533B00776D43 /* CGFloat+Random.swift */,
-				DD41AEE32132533B00776D43 /* UIColor.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,9 +196,9 @@
 			productReference = DD41AE9A2132500800776D43 /* Revolutionary.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		DD41AEA82132504800776D43 /* Demo */ = {
+		DD41AEA82132504800776D43 /* iOSDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DD41AEB82132504A00776D43 /* Build configuration list for PBXNativeTarget "Demo" */;
+			buildConfigurationList = DD41AEB82132504A00776D43 /* Build configuration list for PBXNativeTarget "iOSDemo" */;
 			buildPhases = (
 				DD41AEA52132504800776D43 /* Sources */,
 				DD41AEA62132504800776D43 /* Frameworks */,
@@ -228,9 +208,9 @@
 			);
 			dependencies = (
 			);
-			name = Demo;
+			name = iOSDemo;
 			productName = Demo;
-			productReference = DD41AEA92132504800776D43 /* Demo.app */;
+			productReference = DD41AEA92132504800776D43 /* iOSDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 		DDDB6E6F2133937900A4C79C /* Revolutionary-watchOS */ = {
@@ -256,7 +236,7 @@
 		DD41AE912132500800776D43 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = gmatuella;
 				TargetAttributes = {
@@ -286,7 +266,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DD41AEA82132504800776D43 /* Demo */,
+				DD41AEA82132504800776D43 /* iOSDemo */,
 				DD41AE992132500800776D43 /* Revolutionary */,
 				DDDB6E6F2133937900A4C79C /* Revolutionary-watchOS */,
 			);
@@ -318,11 +298,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD41AECB2132508200776D43 /* CGFloat.swift in Sources */,
-				DD41AEC82132508200776D43 /* CircularProgress.swift in Sources */,
+				52F7473D2217530600778273 /* RevolutionaryView.swift in Sources */,
+				DD41AEC82132508200776D43 /* Revolutionary.swift in Sources */,
 				DD41AEC92132508200776D43 /* SKNode+SKAction.swift in Sources */,
-				DD41AEC52132508200776D43 /* CircularTimer.swift in Sources */,
-				DD41AECA2132508200776D43 /* Typealias.swift in Sources */,
+				52F7128F2212C67900F781C4 /* RevolutionaryBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,17 +310,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD41AEF1213253A400776D43 /* SKNode+SKAction.swift in Sources */,
-				DD41AEF2213253A400776D43 /* Typealias.swift in Sources */,
-				DD41AEF3213253A400776D43 /* CGFloat.swift in Sources */,
-				DD41AEF4213253A400776D43 /* CircularProgress.swift in Sources */,
-				DD41AEF5213253A400776D43 /* CircularTimer.swift in Sources */,
+				524B4E2B22158FDF0048A6C3 /* ShowcasesViewController.swift in Sources */,
+				DD41AEF4213253A400776D43 /* Revolutionary.swift in Sources */,
+				524B4E28221582F40048A6C3 /* RevolutionaryBuilder.swift in Sources */,
 				DD41AEEC2132533B00776D43 /* AppDelegate.swift in Sources */,
-				DD41AEEF2132533B00776D43 /* UIColor.swift in Sources */,
-				DD41AEEB2132533B00776D43 /* CircularProgressViewController.swift in Sources */,
-				DD41AEF02132533B00776D43 /* CGFloat+Random.swift in Sources */,
-				DD41AEE92132533B00776D43 /* CircularTimerScene.swift in Sources */,
-				DD41AEEA2132533B00776D43 /* CircularProgressScene.swift in Sources */,
-				DD41AEE82132533B00776D43 /* CircularTimerViewController.swift in Sources */,
+				5209FEDC2219BFD000875E33 /* PropertiesViewController.swift in Sources */,
+				52F7473C2217530600778273 /* RevolutionaryView.swift in Sources */,
+				DD41AEEB2132533B00776D43 /* RevolutionaryViewController.swift in Sources */,
+				52A0601A221AED4E00A841D7 /* UIExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,10 +326,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDDB6E782133941700A4C79C /* SKNode+SKAction.swift in Sources */,
-				DDDB6E792133941700A4C79C /* Typealias.swift in Sources */,
-				DDDB6E7A2133941700A4C79C /* CGFloat.swift in Sources */,
-				DDDB6E7B2133941700A4C79C /* CircularProgress.swift in Sources */,
-				DDDB6E7C2133941700A4C79C /* CircularTimer.swift in Sources */,
+				52F7473E2217530600778273 /* RevolutionaryView.swift in Sources */,
+				DDDB6E7B2133941700A4C79C /* Revolutionary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,8 +470,9 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -511,6 +486,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmatuella.Revolutionary;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -523,8 +499,9 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -538,6 +515,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmatuella.Revolutionary;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -549,16 +527,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CV54LX9MG6;
-				INFOPLIST_FILE = "$(SRCROOT)/Demo/Resources/Info.plist";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/iOSDemo/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gmatuella.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmatuella.iOSDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -570,16 +550,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CV54LX9MG6;
-				INFOPLIST_FILE = "$(SRCROOT)/Demo/Resources/Info.plist";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/iOSDemo/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gmatuella.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmatuella.iOSDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -664,7 +646,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DD41AEB82132504A00776D43 /* Build configuration list for PBXNativeTarget "Demo" */ = {
+		DD41AEB82132504A00776D43 /* Build configuration list for PBXNativeTarget "iOSDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD41AEB92132504A00776D43 /* Debug */,
