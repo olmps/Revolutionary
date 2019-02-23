@@ -1,7 +1,5 @@
 language: swift
-osx_image: xcode10
+osx_image: xcode10.1
 xcode_project: Revolutionary.xcodeproj
-xcode_scheme:
-    - Revolutionary
-script:
-xcodebuild CODE_SIGNING_REQUIRED=NO
+xcode_scheme: Revolutionary
+script: xcodebuild CODE_SIGNING_REQUIRED=NO
