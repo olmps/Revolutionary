@@ -11,6 +11,7 @@
 		524B4E28221582F40048A6C3 /* RevolutionaryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F7128E2212C67900F781C4 /* RevolutionaryBuilder.swift */; };
 		524B4E2B22158FDF0048A6C3 /* ShowcasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B4E2A22158FDF0048A6C3 /* ShowcasesViewController.swift */; };
 		528BA76722218D2200526F9C /* RevolutionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F7473B2217530600778273 /* RevolutionaryView.swift */; };
+		528BA7A32221966800526F9C /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 528BA7A22221966800526F9C /* .travis.yml */; };
 		52A0601A221AED4E00A841D7 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A06019221AED4E00A841D7 /* UIExtensions.swift */; };
 		52F7128F2212C67900F781C4 /* RevolutionaryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F7128E2212C67900F781C4 /* RevolutionaryBuilder.swift */; };
 		52F7473D2217530600778273 /* RevolutionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F7473B2217530600778273 /* RevolutionaryView.swift */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		5209FEDB2219BFD000875E33 /* PropertiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesViewController.swift; sourceTree = "<group>"; };
 		524B4E2A22158FDF0048A6C3 /* ShowcasesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowcasesViewController.swift; sourceTree = "<group>"; };
+		528BA7A22221966800526F9C /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		52A06019221AED4E00A841D7 /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		52F7128E2212C67900F781C4 /* RevolutionaryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevolutionaryBuilder.swift; sourceTree = "<group>"; };
 		52F7473B2217530600778273 /* RevolutionaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevolutionaryView.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 		528BA76622218A8300526F9C /* Metadata */ = {
 			isa = PBXGroup;
 			children = (
+				528BA7A22221966800526F9C /* .travis.yml */,
 				52FC9B07221B6ED200B04527 /* Revolutionary.podspec */,
 				52FC9B05221B6E3900B04527 /* .gitignore */,
 				52FC9B02221B6E2700B04527 /* LICENSE */,
@@ -267,6 +270,7 @@
 			files = (
 				DD41AEEE2132533B00776D43 /* Main.storyboard in Resources */,
 				DD41AEED2132533B00776D43 /* LaunchScreen.storyboard in Resources */,
+				528BA7A32221966800526F9C /* .travis.yml in Resources */,
 				52FC9B03221B6E2700B04527 /* README.md in Resources */,
 				DD41AEB32132504A00776D43 /* Assets.xcassets in Resources */,
 				52FC9B06221B6E3900B04527 /* .gitignore in Resources */,
