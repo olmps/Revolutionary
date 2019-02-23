@@ -10,11 +10,14 @@
 		5209FEDC2219BFD000875E33 /* PropertiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5209FEDB2219BFD000875E33 /* PropertiesViewController.swift */; };
 		524B4E28221582F40048A6C3 /* RevolutionaryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F7128E2212C67900F781C4 /* RevolutionaryBuilder.swift */; };
 		524B4E2B22158FDF0048A6C3 /* ShowcasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B4E2A22158FDF0048A6C3 /* ShowcasesViewController.swift */; };
+		528BA76722218D2200526F9C /* RevolutionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F7473B2217530600778273 /* RevolutionaryView.swift */; };
 		52A0601A221AED4E00A841D7 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A06019221AED4E00A841D7 /* UIExtensions.swift */; };
 		52F7128F2212C67900F781C4 /* RevolutionaryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F7128E2212C67900F781C4 /* RevolutionaryBuilder.swift */; };
-		52F7473C2217530600778273 /* RevolutionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F7473B2217530600778273 /* RevolutionaryView.swift */; };
 		52F7473D2217530600778273 /* RevolutionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F7473B2217530600778273 /* RevolutionaryView.swift */; };
-		52F7473E2217530600778273 /* RevolutionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F7473B2217530600778273 /* RevolutionaryView.swift */; };
+		52FC9B03221B6E2700B04527 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 52FC9B01221B6E2700B04527 /* README.md */; };
+		52FC9B04221B6E2700B04527 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 52FC9B02221B6E2700B04527 /* LICENSE */; };
+		52FC9B06221B6E3900B04527 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 52FC9B05221B6E3900B04527 /* .gitignore */; };
+		52FC9B08221B6ED200B04527 /* Revolutionary.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 52FC9B07221B6ED200B04527 /* Revolutionary.podspec */; };
 		DD41AEB32132504A00776D43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD41AEB22132504A00776D43 /* Assets.xcassets */; };
 		DD41AEC82132508200776D43 /* Revolutionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEBF2132508100776D43 /* Revolutionary.swift */; };
 		DD41AEC92132508200776D43 /* SKNode+SKAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEC12132508100776D43 /* SKNode+SKAction.swift */; };
@@ -24,8 +27,6 @@
 		DD41AEEE2132533B00776D43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD41AEE02132533B00776D43 /* Main.storyboard */; };
 		DD41AEF1213253A400776D43 /* SKNode+SKAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEC12132508100776D43 /* SKNode+SKAction.swift */; };
 		DD41AEF4213253A400776D43 /* Revolutionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEBF2132508100776D43 /* Revolutionary.swift */; };
-		DDDB6E782133941700A4C79C /* SKNode+SKAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEC12132508100776D43 /* SKNode+SKAction.swift */; };
-		DDDB6E7B2133941700A4C79C /* Revolutionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41AEBF2132508100776D43 /* Revolutionary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,10 @@
 		52A06019221AED4E00A841D7 /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		52F7128E2212C67900F781C4 /* RevolutionaryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevolutionaryBuilder.swift; sourceTree = "<group>"; };
 		52F7473B2217530600778273 /* RevolutionaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevolutionaryView.swift; sourceTree = "<group>"; };
+		52FC9B01221B6E2700B04527 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		52FC9B02221B6E2700B04527 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		52FC9B05221B6E3900B04527 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		52FC9B07221B6ED200B04527 /* Revolutionary.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Revolutionary.podspec; sourceTree = "<group>"; };
 		DD41AE9A2132500800776D43 /* Revolutionary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Revolutionary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD41AEA92132504800776D43 /* iOSDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD41AEB22132504A00776D43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,7 +49,6 @@
 		DD41AEDD2132533B00776D43 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD41AEDF2132533B00776D43 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD41AEE12132533B00776D43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DDDB6E702133937900A4C79C /* Revolutionary_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Revolutionary_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,13 +66,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDDB6E6C2133937900A4C79C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,9 +77,21 @@
 			path = Showcases;
 			sourceTree = "<group>";
 		};
+		528BA76622218A8300526F9C /* Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				52FC9B07221B6ED200B04527 /* Revolutionary.podspec */,
+				52FC9B05221B6E3900B04527 /* .gitignore */,
+				52FC9B02221B6E2700B04527 /* LICENSE */,
+				52FC9B01221B6E2700B04527 /* README.md */,
+			);
+			name = Metadata;
+			sourceTree = "<group>";
+		};
 		DD41AE902132500800776D43 = {
 			isa = PBXGroup;
 			children = (
+				528BA76622218A8300526F9C /* Metadata */,
 				DD41AE9C2132500800776D43 /* Revolutionary */,
 				DD41AEAA2132504800776D43 /* iOSDemo */,
 				DD41AE9B2132500800776D43 /* Products */,
@@ -94,7 +103,6 @@
 			children = (
 				DD41AE9A2132500800776D43 /* Revolutionary.framework */,
 				DD41AEA92132504800776D43 /* iOSDemo.app */,
-				DDDB6E702133937900A4C79C /* Revolutionary_watchOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -213,23 +221,6 @@
 			productReference = DD41AEA92132504800776D43 /* iOSDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DDDB6E6F2133937900A4C79C /* Revolutionary-watchOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DDDB6E772133937900A4C79C /* Build configuration list for PBXNativeTarget "Revolutionary-watchOS" */;
-			buildPhases = (
-				DDDB6E6B2133937900A4C79C /* Sources */,
-				DDDB6E6C2133937900A4C79C /* Frameworks */,
-				DDDB6E6E2133937900A4C79C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Revolutionary-watchOS";
-			productName = "Revolutionary-watchOS";
-			productReference = DDDB6E702133937900A4C79C /* Revolutionary_watchOS.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -248,9 +239,6 @@
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 0940;
 					};
-					DDDB6E6F2133937900A4C79C = {
-						CreatedOnToolsVersion = 9.4.1;
-					};
 				};
 			};
 			buildConfigurationList = DD41AE942132500800776D43 /* Build configuration list for PBXProject "Revolutionary" */;
@@ -268,7 +256,6 @@
 			targets = (
 				DD41AEA82132504800776D43 /* iOSDemo */,
 				DD41AE992132500800776D43 /* Revolutionary */,
-				DDDB6E6F2133937900A4C79C /* Revolutionary-watchOS */,
 			);
 		};
 /* End PBXProject section */
@@ -280,14 +267,11 @@
 			files = (
 				DD41AEEE2132533B00776D43 /* Main.storyboard in Resources */,
 				DD41AEED2132533B00776D43 /* LaunchScreen.storyboard in Resources */,
+				52FC9B03221B6E2700B04527 /* README.md in Resources */,
 				DD41AEB32132504A00776D43 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DDDB6E6E2133937900A4C79C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				52FC9B06221B6E3900B04527 /* .gitignore in Resources */,
+				52FC9B08221B6ED200B04527 /* Revolutionary.podspec in Resources */,
+				52FC9B04221B6E2700B04527 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,24 +294,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD41AEF1213253A400776D43 /* SKNode+SKAction.swift in Sources */,
+				528BA76722218D2200526F9C /* RevolutionaryView.swift in Sources */,
 				524B4E2B22158FDF0048A6C3 /* ShowcasesViewController.swift in Sources */,
 				DD41AEF4213253A400776D43 /* Revolutionary.swift in Sources */,
 				524B4E28221582F40048A6C3 /* RevolutionaryBuilder.swift in Sources */,
 				DD41AEEC2132533B00776D43 /* AppDelegate.swift in Sources */,
 				5209FEDC2219BFD000875E33 /* PropertiesViewController.swift in Sources */,
-				52F7473C2217530600778273 /* RevolutionaryView.swift in Sources */,
 				DD41AEEB2132533B00776D43 /* RevolutionaryViewController.swift in Sources */,
 				52A0601A221AED4E00A841D7 /* UIExtensions.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DDDB6E6B2133937900A4C79C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DDDB6E782133941700A4C79C /* SKNode+SKAction.swift in Sources */,
-				52F7473E2217530600778273 /* RevolutionaryView.swift in Sources */,
-				DDDB6E7B2133941700A4C79C /* Revolutionary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,64 +541,6 @@
 			};
 			name = Release;
 		};
-		DDDB6E752133937900A4C79C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Manual;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/watchOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gmatuella.Revolutionary-watchOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3;
-			};
-			name = Debug;
-		};
-		DDDB6E762133937900A4C79C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Manual;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/watchOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gmatuella.Revolutionary-watchOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -651,15 +567,6 @@
 			buildConfigurations = (
 				DD41AEB92132504A00776D43 /* Debug */,
 				DD41AEBA2132504A00776D43 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DDDB6E772133937900A4C79C /* Build configuration list for PBXNativeTarget "Revolutionary-watchOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DDDB6E752133937900A4C79C /* Debug */,
-				DDDB6E762133937900A4C79C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
