@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name                      = "Revolutionary"
-s.version                   = "0.3.0"
+s.version                   = "0.3.1"
 s.summary                   = "Animate your Revolutions :)"
 s.description               = <<-DESC
 Revolutionary helps you to manage circular animations by using SpriteKit (so you can use in watchOS and tvOS as well) working seamlessly when imported in UIKit.

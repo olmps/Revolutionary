@@ -346,7 +346,9 @@ public class Revolutionary: SKNode {
      - To build the arc radius, the property `arcRadius` is used.
      - To determine the arc orientation, the property `clockwise` is used.
      */
-    private func arcPath(withProgress progress: CGFloat) -> CGPath {
+    private func arcPath(withProgress progress: CGFloat) -> CGPath? {
+        guard progress > 0 else { return nil }
+        
         let arcEndAngle = V.fullRevolution * progress
         
         //The "clockwise" is inverse in SpriteKit coordinates. See more at https://stackoverflow.com/a/36820789/8558606
