@@ -172,6 +172,8 @@ extension RevolutionaryViewController {
     }
     
     @IBAction private func animateTapped(_ sender: UIButton) {
+        if revolutionary.isPaused { revolutionary.resume() }
+        
         switch state {
         case .progress: animateProgressState()
         case .timer: animateTimerState()
@@ -240,6 +242,34 @@ extension RevolutionaryViewController: PropertiesDelegate {
     
     func properties(_ properties: PropertiesViewController, updatedAnimationMultiplier animationMultiplier: Int) {
         revolutionary.animationMultiplier = animationMultiplier
+    }
+    
+    func properties(_ properties: PropertiesViewController, updatedBackgroundArc hasBackgroundArc: Bool) {
+        revolutionary.hasBackgroundArc = hasBackgroundArc
+    }
+    
+    func properties(_ properties: PropertiesViewController, updatedMainArcColor mainArcColor: UIColor) {
+        revolutionary.mainArcColor = mainArcColor
+    }
+    
+    func properties(_ properties: PropertiesViewController, updatedBackgroundArcColor backgroundArcColor: UIColor) {
+        revolutionary.backgroundArcColor = backgroundArcColor
+    }
+    
+    func properties(_ properties: PropertiesViewController, updatedMainArcWidth mainArcWidth: CGFloat) {
+        revolutionary.mainArcWidth = mainArcWidth
+    }
+    
+    func properties(_ properties: PropertiesViewController, updatedBackgroundArcWidth backgroundArcWidth: CGFloat) {
+        revolutionary.backgroundArcWidth = backgroundArcWidth
+    }
+    
+    func properties(_ properties: PropertiesViewController, updatedMainArcLineCap mainArcLineCap: CGLineCap) {
+        revolutionary.mainArcLineCap = mainArcLineCap
+    }
+    
+    func properties(_ properties: PropertiesViewController, updatedBackgroundArcLineCap backgroundArcLineCap: CGLineCap) {
+        revolutionary.backgroundArcLineCap = backgroundArcLineCap
     }
 }
 

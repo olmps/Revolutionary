@@ -9,8 +9,21 @@
 import UIKit
 
 extension UIColor {
+    
     static var coolPurple: UIColor {
         return UIColor(red: 121 / 255, green: 92 / 255, blue: 212 / 255, alpha: 1)
+    }
+    
+    static var coolGreen: UIColor {
+        return UIColor(red: 92 / 255, green: 212 / 255, blue: 121 / 255, alpha: 1)
+    }
+    
+    static var coolPink: UIColor {
+        return UIColor(red: 212 / 255, green: 92 / 255, blue: 183 / 255, alpha: 1)
+    }
+    
+    static var coolBlue: UIColor {
+        return UIColor(red: 92 / 255, green: 183 / 255, blue: 212 / 255, alpha: 1)
     }
 }
 
