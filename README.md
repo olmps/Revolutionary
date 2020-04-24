@@ -65,34 +65,14 @@ TODO
 
 ## Features
 
-- [x] iOS support <!--TODO: watchOS, tvOS, macOS -->
+- [x] iOS support
 - [x] Fully customizable UI properties of the drawn arcs
-<!-- TODO: - [x] Add Textures to the arcs; -->
 - [x] Manage a Progress behavior
 - [x] Manage a Stopwatch/Countdown behavior
 
 ## Roadmap
 
-Features **implemented/planned** for 2019 (in order of priority):
-
-- [x] Framework for iOS
-- [x] Examples for iOS
-- [x] Support Carthage
-- [x] Support CocoaPods
-- [x] Add TravisCI
-- [x] Repository description + how to use
-- [ ] Implement Textures on the `SKNode`s
-- [ ] iOS Showcases + Improved iOS Examples
-- [ ] Add Swiftlint
-- [ ] Add Jazzy Docs
-- [ ] Support watchOS
-- [ ] Examples for watchOS
-- [ ] Expose more properties to ease the customization of the `Revolutionary.swift` + improve the iOS examples with it
-- [ ] Find a better way to replicate the commentaries on the Builder (not just copy pasting the docs from `Revolutionary.swift`)
-- [ ] Add Tests (+ support with some check tool, like Coveralls)
-- [ ] Support/Examples/Showcases for watchOS
-- [ ] Support/Examples/Showcases for macOS
-- [ ] Support/Examples/Showcases for tvOS
+All features, improvements and fixes can be watched here in this [github's project (roadmap)][project]
 
 ## Installing
 
@@ -349,6 +329,7 @@ Revolutionary is licensed under MIT - [LICENSE][license].
 
 <!--- Links --->
 
+[project]:https://github.com/orgs/olmps/projects/1
 
 [watchkitImagesTutorial]:https://www.natashatherobot.com/watchkit-animate/
 [appleDocWKII]:https://developer.apple.com/documentation/watchkit/wkinterfaceimage
